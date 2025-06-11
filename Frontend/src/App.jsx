@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
+import AuthLayout from './layouts/authlayout/AuthLayout';
 import MainLayout from './layouts/mainlayout/MainLayout';
 import Home from './pages/homepage/Home';
 import About from './pages/about/About';
+import Login from './pages/auth/Login';
+import SignUp from './pages/auth/SignUp';
+import ContinueSetup from './pages/auth/popup-signup/Popup';
 import './App.css';
 
 import AOS from 'aos';
@@ -19,13 +23,19 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/auth" element={<AuthLayout />}>
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="continue-setup" element={<ContinueSetup />} />
+      </Route>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-      
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
       </Route>
     </Routes>
-  )
+  );
 }
 
 export default App
