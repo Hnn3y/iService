@@ -1,16 +1,15 @@
-.finishAccountSetup {
+.profilePreview{
 
 }
-
-.finishAccountSetup input,
-.finishAccountSetup select {
+.profilePreview input,
+.profilePreview select {
     height: 2.5rem;
     width: 100%;
     border: 1px solid rgb(202, 202, 202);
     border-radius: 20px;
 
 }
-.finishAccountSetup select{
+.profilePreview select{
     appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -20,7 +19,7 @@
     width: 100%;
     position: relative;
 }
-.customSelect div::before {
+.customSelect > div:not(:nth-child(1), :nth-child(2), :nth-child(5)):before {
     content: '▼';
     position: absolute;
     display: block;

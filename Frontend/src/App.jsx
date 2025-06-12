@@ -8,6 +8,7 @@ import Login from './pages/auth/Login';
 import SignUp from './pages/auth/SignUp';
 import ContinueSetup from './pages/auth/popup-signup/Popup';
 import FinishAccountSetup from './pages/auth/finish-acc-setup/FinishAccountSetup';
+import ProfilePreview from './pages/auth/profile-preview/ProfilePreview'
 import './App.css';
 
 import AOS from 'aos';
@@ -31,6 +32,7 @@ function App() {
         <Route path="continue-setup" element={<ContinueSetup />} />
         <Route path="accountsetup" element={<AccountSetup />} />
         <Route path="finishaccountsetup" element={<FinishAccountSetup />} />
+        <Route path="profilepreview" element={<ProfilePreview />} />
       </Route>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />

@@ -29,7 +29,7 @@ const FinishAccountSetup = () => {
       className={`w-full bg-[#fff] text-[#000] max-w-[20rem] px-5 py-8 flex flex-col items-center gap-4 ${styles.finishAccountSetup}`}
     >
       <div
-        className={`w-full flex flex-col items-center ${styles.customSelect}`}
+        className={`w-full flex flex-col items-center gap-4 ${styles.customSelect}`}
       >
         <h2 className="text-2xl font-semibold">Finish Your Account Setup </h2>
         <h4 className="mt-5 mb-2 font-semibold self-start">Occupation</h4>
