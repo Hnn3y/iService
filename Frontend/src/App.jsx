@@ -11,6 +11,7 @@ import './App.css';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AccountSetup from './pages/auth/setup-account/AccountSetup';
 
 // import { Button } from '@shadcn/ui';
 // import { Button } from "@shadcn/ui"
@@ -27,12 +28,11 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="continue-setup" element={<ContinueSetup />} />
+        <Route path="accountsetup" element={<AccountSetup />} />
       </Route>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/signup" element={<SignUp />} /> */}
       </Route>
     </Routes>
   );

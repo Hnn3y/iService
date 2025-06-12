@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png"
 import styles from "./signUp.module.css";
 const SignUp = () => {
   const navigate = useNavigate();
-    const handlSignupBtnClick = () => {
+    const handleSignupBtnClick = () => {
       navigate("/auth/continue-setup")
     }
     return (
@@ -47,7 +47,7 @@ Must have a mix of capital and small letters, symbols, and numbers.</span>
             </div>
           </div>
     
-          <button className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl" onClick={handlSignupBtnClick}>Create account</button>
+          <button className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl" onClick={handleSignupBtnClick}>Create account</button>
           <p>Already have an account? <Link to="/auth/login">Sign in</Link></p>
         </form>
       );

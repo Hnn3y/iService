@@ -6,32 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 import { faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-// uniqueid: myecommerceapp-9bcf9
-/***=======
-  
- // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBpzqDexVDL_gOk7zErb1yV6ySqFP_WXtA",
-  authDomain: "myecommerceapp-9bcf9.firebaseapp.com",
-  projectId: "myecommerceapp-9bcf9",
-  storageBucket: "myecommerceapp-9bcf9.firebasestorage.app",
-  messagingSenderId: "1084176818787",
-  appId: "1:1084176818787:web:539c7a4e2a675684334e56",
-  measurementId: "G-1MCW7VT0RH"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
- ======= ***/
 
 const Login = () => {
     const [showInput, setShowInput] = useState(false);
