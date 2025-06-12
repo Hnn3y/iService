@@ -1,0 +1,40 @@
+.profilePreview{
+
+}
+.profilePreview input,
+.profilePreview select {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 20px;
+
+}
+.profilePreview select{
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-inline: 1rem;
+}
+.customSelect > div{
+    width: 100%;
+    position: relative;
+}
+.customSelect > div:not(:nth-child(1), :nth-child(2), :nth-child(5)):before {
+    content: '▼';
+    position: absolute;
+    display: block;
+    bottom: .6rem;
+    right: 12px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #000;
+  }
+  .finishAccountSetup label {
+      font-size: 12px;
+  }
+.finishAccountSetup select option{
+    color: rgb(204, 204, 204);
+    margin-right: 1rem;
+    border-radius: 20px;
+
+}

@@ -1,0 +1,12 @@
+
+.login input{
+    padding-inline: 1rem;
+    border: 1px solid #bbbbbb;
+}
+.login > div:nth-child(3) > div input{
+    opacity: 0;
+}
+.login > div:nth-child(3) > div input:checked ~ span {
+    background-color: blue;
+
+}

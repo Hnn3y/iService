@@ -8,7 +8,7 @@ const MainLayout = () => {
     return(
         <div className={`w-full ${styles.mainlayout}`}>
             <Header />
-            <main className='w-[100%] h-full'>
+            <main className='w-[100%] h-full flex flex-col items-center  overflow-y-scroll'>
                 <Outlet />
             </main>
             <Footer />
