@@ -1,14 +1,25 @@
 
+import { useState, useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png"
 import styles from "./signUp.module.css";
 const SignUp = () => {
+  const { setEmail } = useContext(UserContext);
+  const [inputEmail, setInputEmail] = useState("");
+
   const navigate = useNavigate();
-    const handleSignupBtnClick = () => {
-      navigate("/auth/continue-setup")
-    }
+
+  const handleSignupBtnClick = (e) => {
+    e.preventDefault();
+    setEmail(inputEmail);
+    // navigate("/auth/continue-setup");
+
+    alert(inputEmail);
+  };
+
     return (
-        <form action="" className={`w-full bg-[#fff] text-[#000] max-w-[20rem] px-5 py-8 flex flex-col items-center gap-4 ${styles.signUp}`}>
+        <form onSubmit={handleSignupBtnClick} action="" className={`w-full bg-[#fff] text-[#000] max-w-[20rem] px-5 py-8 flex flex-col items-center gap-4 ${styles.signUp}`}>
           <div className="flex flex-col items-center">
             <img src={logo} alt="" className="w-20 h-20" />
     
@@ -25,10 +36,16 @@ const SignUp = () => {
          
             </div>
             <div className="email-box w-full flex flex-col items-start gap-2">
-              <label htmlFor="email">
+              <label>
                 Email Address <span className="text-red-600">*</span>
               </label>
-              <input type="email" placeholder="jajay1@gmail.com" className="w-full h-[2.5rem] px-4 border rounded-3xl" />
+              <input 
+              type="email"
+               name="email" 
+               value={inputEmail}
+               placeholder="jajay1@gmail.com"
+               onChange={(e) => setInputEmail(e.target.value)} 
+               className="w-full h-[2.5rem] px-4 border rounded-3xl" />
             </div>
     
             <div className="password-box flex flex-col items-start gap-2">
@@ -47,7 +64,7 @@ Must have a mix of capital and small letters, symbols, and numbers.</span>
             </div>
           </div>
     
-          <button className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl" onClick={handleSignupBtnClick}>Create account</button>
+          <button type="submit" className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl">Create account</button>
           <p>Already have an account? <Link to="/auth/login">Sign in</Link></p>
         </form>
       );

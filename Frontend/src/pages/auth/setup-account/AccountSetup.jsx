@@ -22,7 +22,7 @@ const AccountSetup = () => {
 
     const navigate = useNavigate();
     const handleNextBtnClick = () => {
-        navigate("/auth/finishacctsetup")
+        navigate("/auth/finishaccountsetup")
     }
     return (
       <form

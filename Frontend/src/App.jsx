@@ -14,6 +14,7 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AccountSetup from './pages/auth/setup-account/AccountSetup';
+import AuthHome from './pages/auth/authhome/AuthHome';
 
 // import { Button } from '@shadcn/ui';
 // import { Button } from "@shadcn/ui"
@@ -27,6 +28,7 @@ function App() {
   return (
     <Routes>
       <Route path="/auth" element={<AuthLayout />}>
+        <Route path="authhome" element={<AuthHome />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="continue-setup" element={<ContinueSetup />} />

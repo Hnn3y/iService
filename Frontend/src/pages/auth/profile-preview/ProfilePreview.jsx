@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
@@ -19,11 +20,14 @@ const AccountSetup = () => {
     //       setProfilePic(imageUrl);
     //     }
     // }
+    const { email } = useContext(UserContext);
 
     const navigate = useNavigate();
+
     const handleFinishSetupBtnClick = () => {
-        navigate("/home")
+        navigate("/")
     }
+
     return (
       <form
         action=""
@@ -57,7 +61,7 @@ const AccountSetup = () => {
         </div>
 
         <div className="edit-profile w-full flex flex-col items-center gap-2">
-          <p className="text-lg font-semibold">{"jayjay1@gmail.com"}</p>
+          <p className="text-lg font-semibold"> Email:{email || "no email found!!!"}</p>
           <Link to="" className="edit text-[#397BFF] text-[12px] w-[119px] h-[40px] flex justify-center items-center gap-2 border border-[#397BFF] rounded-xl">
             <p>Edit Profile</p>
             <span>
