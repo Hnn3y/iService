@@ -20,7 +20,7 @@
     width: 100%;
     position: relative;
 }
-.customSelect div::before {
+.customSelect div:not(.customSelect div:last-child)::before {
     content: '▼';
     position: absolute;
     display: block;
