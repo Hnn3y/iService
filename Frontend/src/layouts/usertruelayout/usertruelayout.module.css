@@ -1,0 +1,16 @@
+.userTrueLayout{
+    background: url(../../assets/logo.png);
+    background-color: rgb(236, 243, 243);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    position: relative;
+}
+.userTrueLayout::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: #333;
+    opacity: .2;
+}
