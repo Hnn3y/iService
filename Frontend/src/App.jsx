@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
 import AuthLayout from './layouts/authlayout/AuthLayout';
 import MainLayout from './layouts/mainlayout/MainLayout';
+import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
 import Home from './pages/homepage/Home';
 import About from './pages/about/About';
 import Login from './pages/auth/Login';
@@ -39,6 +40,10 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+      </Route>
+      <Route path="/usertrue" element={<UserTrueLayout />}>
+        {/* <Route path="usertruehome" element={<UserTrueHome />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
       </Route>
     </Routes>
   );

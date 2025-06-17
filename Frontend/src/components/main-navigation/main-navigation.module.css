@@ -1,0 +1,27 @@
+.mainNavigation{
+background-color: #D9D9D9;
+padding: .5rem 1rem;
+
+position: fixed;
+bottom: 0;
+}
+
+.mainNavigation ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainNavigation ul li span {
+    background-color: #222;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.mainNavigation ul li a{
+    color: #222;
+    font-weight: 600;
+}

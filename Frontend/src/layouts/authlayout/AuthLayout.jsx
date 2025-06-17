@@ -10,7 +10,7 @@ const AuthLayout = () => {
             <main className='w-[100%] h-full flex flex-col items-center  overflow-y-scroll'>
                 <Outlet />
             </main>
-
+            
         </div>
     )
 }
