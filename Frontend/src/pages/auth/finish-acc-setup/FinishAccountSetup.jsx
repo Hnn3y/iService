@@ -89,7 +89,7 @@ const FinishAccountSetup = () => {
 
       <button
       type="submit"
-        className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold mt-6 flex justify-center items-center rounded-3xl"
+        className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold mt-6 flex justify-center items-center rounded-3xl cursor-pointer"
       >
         Next
       </button>

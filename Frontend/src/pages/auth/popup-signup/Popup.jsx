@@ -21,7 +21,7 @@ const SignupPopup = () => {
                 </div>
                 <h2 className="text-xl font-bold">You're Almost Done <br /> Great Job!</h2>
                 <p className="text-gray-500">You have succesfully signed up</p>
-                <button className="w-full h-[2.5rem] bg-[#044BDA] text-[#fff] text-lg font-semibold flex justify-center items-center rounded-xl" onClick={handleSetupAccBtnClick}>Set up your account</button>
+                <button className="w-full h-[2.5rem] bg-[#044BDA] text-[#fff] text-lg font-semibold flex justify-center items-center rounded-xl cursor-pointer" onClick={handleSetupAccBtnClick}>Set up your account</button>
             </div>
 
         </div>
