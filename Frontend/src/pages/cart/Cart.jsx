@@ -1,9 +1,18 @@
 
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import transferIcon from "../../assets/transfer-icon.png";
 import CartItem from "./CartItem";
+
 const Cart = () => {
+
+    const navigate = useNavigate();
+    const handlePaynowBtnClick = () => {
+    //   e.preventDefault();
+      navigate("/usertrue/paymentinfo");
+      console.log("Please pay and upload your payment proof!")
+    };
 
     return(
         <section className="cart w-full px-7 py-4 pb-[8rem] flex flex-col items-center isolate relative">
@@ -21,7 +30,7 @@ const Cart = () => {
                    <span> Bank Transfer</span><span>(Naira)</span>
                 </div>
 
-                <button className="bg-[#117BF5] rounded px-2 py-1 font-semibold">Pay now</button>
+                <button className="bg-[#117BF5] rounded px-2 py-1 font-semibold cursor-pointer" onClick={handlePaynowBtnClick}>Pay now</button>
             </div>
         </section>
     )

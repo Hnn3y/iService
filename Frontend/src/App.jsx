@@ -17,6 +17,8 @@ import 'aos/dist/aos.css';
 import AccountSetup from './pages/auth/setup-account/AccountSetup';
 import AuthHome from './pages/auth/authhome/AuthHome';
 import Cart from './pages/cart/Cart';
+import PaymentInfo from './pages/cart/PaymentInfo';
+import PaymentSuccessPopup from './pages/cart/PaymentSuccessPopup';
 
 // import { Button } from '@shadcn/ui';
 // import { Button } from "@shadcn/ui"
@@ -44,7 +46,8 @@ function App() {
       </Route>
       <Route path="/usertrue" element={<UserTrueLayout />}>
         <Route path="cart" element={<Cart />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="paymentinfo" element={<PaymentInfo />} />
+        <Route path="paymentsuccesspopup" element={<PaymentSuccessPopup />} />
       </Route>
     </Routes>
   );

@@ -27,7 +27,7 @@ const Login = () => {
       <div className="flex flex-col items-center">
         <img src={logo} alt="" className="w-20 h-20" />
 
-        <h2 className="text-2xl">Welcome Back </h2>
+        <h2 className="text-2xl">Welcome Back 😊</h2>
         <p className="max-w-[95%] text-[#737373] text-xs">
           Let’s pick up right where you left off and make today productive.
         </p>
