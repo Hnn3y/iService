@@ -27,7 +27,7 @@ const Login = () => {
       <div className="flex flex-col items-center">
         <img src={logo} alt="" className="w-20 h-20" />
 
-        <h2 className="text-2xl">Welcome Back </h2>
+        <h2 className="text-2xl">Welcome Back <small>😊</small></h2>
         <p className="max-w-[95%] text-[#737373] text-xs">
           Let’s pick up right where you left off and make today productive.
         </p>
@@ -80,7 +80,7 @@ const Login = () => {
         </div>
       </div>
 
-      <button className="w-full h-[2.5rem] bg-[#044BDA] text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl">
+      <button className="w-full h-[2.5rem] bg-[#044BDA] text-[#fff] text-lg font-semibold flex justify-center items-center rounded-3xl cursor-pointer">
         Log in
       </button>
       <p>

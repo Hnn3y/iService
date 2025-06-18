@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
+import { UserContext } from "../../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -7,25 +8,46 @@ import styles from "./account-setup.module.css";
 
 
 const AccountSetup = () => {
-    const [profilePic, setProfilePic] = useState("");
+  const { user, setUser } = useContext(UserContext);
+  
+  const [profilePic, setProfilePic] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
 
-    const handleProfilePicBtn = (e) => {
-        e.preventDefault();
-        setProfilePic(e.target.value);
-        
-        const file = e.target.files[0];
-        if (file) {
-          const imageUrl = URL.createObjectURL(file);
-          setProfilePic(imageUrl);
-        }
-    }
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-    const handleNextBtnClick = () => {
-        navigate("/auth/finishacctsetup")
+  const handleProfilePicBtn = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setProfilePic(imageUrl);
     }
+  };
+
+    const handleNextBtnClick = (e) => {
+      e.preventDefault();
+    
+      setUser(prev => ({
+        ...prev,
+        profileImage: profilePic,
+        name,
+        phone,
+        address
+      }));
+    
+      navigate("/auth/finishaccountsetup");
+      // setTimeout(() => {
+      //   navigate("/auth/finishaccountsetup");
+      // }, 0);
+      console.log(`${name} ${address} ${phone}`)
+    };
+    
+
     return (
       <form
+      onSubmit={handleNextBtnClick}
         action=""
         className={`w-full bg-[#fff] text-[#000] max-w-[20rem] px-5 py-8 flex flex-col items-center gap-4 ${styles.accountSetup}`}
       >
@@ -68,7 +90,9 @@ const AccountSetup = () => {
             </label>
             <input
               type="text"
+              value={user.name? user.name : ""}
               placeholder="Jay jay"
+              onChange={(e) => setName(e.target.name)}
               className="w-full h-[2.5rem] px-4 border rounded-3xl"
             />
           </div>
@@ -78,9 +102,12 @@ const AccountSetup = () => {
             </label>
             <input
               type="email"
-              placeholder="jajay1@gmail.com"
+              value={user.email}
+              placeholder={user.email || "Enter email"}
               className="w-full h-[2.5rem] px-4 border rounded-3xl"
+              disabled
             />
+            {user.email? "" : <p className="text-xs text-red-600">Make sure a valid email is filled in the previous step</p>}
           </div>
 
           <div className="password-box flex flex-col items-start gap-2">
@@ -89,7 +116,9 @@ const AccountSetup = () => {
             </label>
             <input
               type="number"
+              value={phone}
               placeholder="+234 90918273645"
+              onChange={(e) => setPhone(e.target.value)}
               className="w-full h-[2.5rem] px-4 border rounded-3xl"
             />
           </div>
@@ -99,15 +128,18 @@ const AccountSetup = () => {
             </label>
             <input
               type="text"
+              value={address}
               placeholder="Sanusi Street, Bariga, Lagos state"
+              onChange={(e) => setAddress(e.target.value)}
               className="w-full h-[2.5rem] px-4 border rounded-3xl"
             />
           </div>
         </div>
 
         <button
-          className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold mt-6 flex justify-center items-center rounded-3xl"
-          onClick={handleNextBtnClick}
+        type="submit"
+          className="w-full h-[2.5rem] bg-blue-600 text-[#fff] text-lg font-semibold mt-6 flex justify-center items-center rounded-3xl cursor-pointer"
+       
         >
           Next
         </button>

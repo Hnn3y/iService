@@ -1,0 +1,15 @@
+.paymentInfo{
+
+}
+
+.paymentInfo > div > div:first-child span{
+    color: #fff;
+    padding: .2rem .5rem;
+}
+.paymentInfo > div > div:first-child span:not(span:last-child){
+    width: 100%;
+
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
