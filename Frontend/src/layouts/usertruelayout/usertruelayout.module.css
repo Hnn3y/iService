@@ -1,16 +1,17 @@
 .userTrueLayout{
     background: url(../../assets/logo.png);
-    background-color: rgb(236, 243, 243);
+    background-color: rgb(241, 241, 241);
+    /* background-color: rgb(186, 190, 190); */
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
     position: relative;
 }
-.userTrueLayout::before {
+/* .userTrueLayout::before {
     content: "";
     display: block;
     position: absolute;
     inset: 0;
-    background-color: #333;
+    background-color: rgb(186, 190, 190);
     opacity: .2;
-}
+} */

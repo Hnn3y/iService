@@ -28,10 +28,10 @@ const CartItem = () => {
             <p className="job-description text-blue-600 text-sm">{user.jobDescription}</p>
           </div>
           <div className="save-or-cancel h-full flex flex-col justify-between items-end">
-            <span className="save bg-[#D9D9D9] py-[.1rem] px-[.4rem] rounded">
+            <button className="save bg-[#D9D9D9] py-[.1rem] px-[.4rem] rounded cursor-pointer ">
               <FontAwesomeIcon icon={faBookmark} className="text-[#6d6d6d]"/>
-            </span>
-            <button className="bg-[#D9D9D9] text-sm font-semibold  px-2 rounded-lg">Cancel</button>
+            </button>
+            <button className="bg-[#D9D9D9] text-sm font-semibold  px-2 rounded-lg cursor-pointer ">Cancel</button>
           </div>
         </div>
       </article>

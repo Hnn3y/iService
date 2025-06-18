@@ -19,14 +19,14 @@ const Cart = () => {
             <button className="backward-arrow w-[1.5rem] aspect-square bg-[#fff] text-blue-600 absolute left-7 rounded">
                 <FontAwesomeIcon icon={ faAngleLeft} />
             </button>
-            <h2 id="cart-items-title" className="text-xl text-[#222] font-semibold">Cart</h2>
+            <h2 id="cart-items-title" className="text-2xl text-[#222] font-semibold">Cart</h2>
             <div className="cart-items-box flex flex-col items-center gap-2">
                 <CartItem />
             </div>
 
-            <div className="payment-option w-full max-w-[12rem] bg-[#fff] p-8 mt-[4rem] flex flex-col gap-5 rounded">
+            <div className="payment-option w-full max-w-[16rem] bg-[#fff] p-8 mt-[4rem] flex flex-col gap-5 rounded-lg">
                 <div className="top text-[#000] font-bold flex flex-col items-center gap-0">
-                    <img src={transferIcon} alt="" className="w-[5rem]" />
+                    <img src={transferIcon} alt="" className="w-[6rem]" />
                    <span> Bank Transfer</span><span>(Naira)</span>
                 </div>
 
