@@ -71,7 +71,7 @@ const Login = () => {
         <div className="remember-me flex items-center gap-2 relative">
           <input type="checkbox" className="w-4 h-4 z-10 cursor-pointer" />
           <p>Remember me</p>
-          <span className="copy-checkbox w-4 h-4 flex justify-center items-center top-[50%] translate-y-[-50%] absolute border border-blue-600 rounded-sm">
+          <span className={`copy-checkbox w-4 h-4 flex justify-center items-center top-[50%] translate-y-[-50%] absolute border border-blue-600 rounded-sm}`}>
             {<FontAwesomeIcon icon={faCheck} className="text-xs text-[#fff]" />}
           </span>
         </div>

@@ -3,3 +3,11 @@
     /* padding-inline: 1rem; */
     border: 1px solid #bbbbbb;
 }
+
+.signUp > div:nth-child(2) > div:last-child > div input{
+    opacity: 0;
+}
+.signUp > div:nth-child(2) > div:last-child > div input:checked ~ span {
+    background-color: blue;
+
+}
