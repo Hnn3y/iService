@@ -106,7 +106,7 @@ const SignUp = () => {
           />
         </div>
         <div className="w-full privacy-consent text-[.9rem] flex flex-col gap-4">
-            <p>By clicking "Sign Up", you agree to our <a href="/privacy-policy.html" target="_blank" className="text-blue-600"><strong>Privacy Policy</strong></a> and <a href="/terms-of-service.html" target="_blank" className="text-blue-600"><strong>Terms of Service</strong></a>.</p>
+            <p>By clicking "Create account", you agree to our <a href="/privacy-policy.html" target="_blank" className="text-blue-600"><strong>Privacy Policy</strong></a> and <a href="/terms-of-service.html" target="_blank" className="text-blue-600"><strong>Terms of Service</strong></a>.</p>
             <div className="form-group" className="w-full  flex items-start gap-2 relative">
                 <input type="checkbox"  name="agreeToTerms" value="yes" id="agreeToTerms" className="mt-1 z-10" required />
                 <label htmlFor="agreeToTerms" className="checkbox-label w-full ">I have read and agree to the policies mentioned above.</label>
