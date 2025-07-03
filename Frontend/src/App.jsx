@@ -6,8 +6,6 @@ import MainLayout from './layouts/mainlayout/MainLayout';
 
 
 import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
-import Home from './pages/homepage/Home';
-import About from './pages/about/About';
 import Login from './pages/auth/Login';
 import SignUp from './pages/auth/SignUp';
 import ContinueSetup from './pages/auth/popup-signup/Popup';
@@ -37,8 +35,8 @@ function App() {
         <Route path="profilepreview" element={<ProfilePreview />} />
       </Route>
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route index element={<Onboarding />} />
+     
       </Route>
       <Route path="/usertrue" element={<UserTrueLayout />}>
         <Route path="cart" element={<Cart />} />
