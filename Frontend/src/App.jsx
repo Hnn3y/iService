@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
 import Onboarding from './pages/Onboarding';
 import AuthLayout from './layouts/authlayout/AuthLayout';
-import MainLayout from './layouts/Mainlayout';
+import MainLayout from './layouts/mainlayout/MainLayout';
+
 import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
 import Home from './pages/homepage/Home';
 import About from './pages/about/About';
@@ -20,8 +21,6 @@ import AuthHome from './pages/auth/authhome/AuthHome';
 import Cart from './pages/cart/Cart';
 import PaymentInfo from './pages/cart/PaymentInfo';
 import PaymentSuccessPopup from './pages/cart/PaymentSuccessPopup';
-
-
 
 function App() {
 
