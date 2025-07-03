@@ -4,6 +4,7 @@ import Onboarding from './pages/Onboarding';
 import AuthLayout from './layouts/authlayout/AuthLayout';
 import MainLayout from './layouts/mainlayout/MainLayout';
 
+
 import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
 import Home from './pages/homepage/Home';
 import About from './pages/about/About';
