@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
+import Onboarding from './pages/Onboarding';
 import AuthLayout from './layouts/authlayout/AuthLayout';
 import MainLayout from './layouts/mainlayout/MainLayout';
+
+
 import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
-import Home from './pages/homepage/Home';
-import About from './pages/about/About';
 import Login from './pages/auth/Login';
 import SignUp from './pages/auth/SignUp';
 import ContinueSetup from './pages/auth/popup-signup/Popup';
@@ -20,13 +21,6 @@ import Cart from './pages/cart/Cart';
 import PaymentInfo from './pages/cart/PaymentInfo';
 import PaymentSuccessPopup from './pages/cart/PaymentSuccessPopup';
 
-// import { Button } from '@shadcn/ui';
-// import { Button } from "@shadcn/ui"
-
-
-
-
-
 function App() {
 
   return (
@@ -41,8 +35,8 @@ function App() {
         <Route path="profilepreview" element={<ProfilePreview />} />
       </Route>
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route index element={<Onboarding />} />
+     
       </Route>
       <Route path="/usertrue" element={<UserTrueLayout />}>
         <Route path="cart" element={<Cart />} />

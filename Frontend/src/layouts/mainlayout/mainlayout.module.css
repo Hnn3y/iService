@@ -1,7 +1,0 @@
-.mainlayout{
-    height: 100%;
-    /* background-color: palegreen; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
