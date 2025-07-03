@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
 import Onboarding from './pages/Onboarding';
 import AuthLayout from './layouts/authlayout/AuthLayout';
-import MainLayout from './layouts/Mainlayout';
+
 import UserTrueLayout from './layouts/usertruelayout/UserTrueLayout';
 import Home from './pages/homepage/Home';
 import About from './pages/about/About';
