@@ -1,9 +1,12 @@
-const CategoryCard = ({ title}) => {
+const CategoryCard = ({ name }) => {
 
     return ( 
-        <div className="bg-gray-300 w-28 h-28 rounded-md flex items-center justify-center font-semibold text-center text-sm shadow"
+        <div className="flex justify-center items-center 
+        w-[100px] h-[100px] bg-gray-200 rounded-lg shadow-sm 
+        text-center text-sm font-medium"
+        
         >
-            {title} 
+            {name} 
         </div>
     );
 };

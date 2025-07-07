@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faBook, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 
-const BottomNav = () => {
+const BottomNav = () => { 
+
+    const { pathname } = useLocation();
 
     return(
 
