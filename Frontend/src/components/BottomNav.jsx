@@ -6,34 +6,30 @@ const BottomNav = () => {
 
     const { pathname } = useLocation();
 
-    return(
+    const navItems = [ 
+        { to: "/", label: "Home", icon: faHome},
+        { to: "/bookng", label: "Booking", icon:faBook},
+        { to: "/cart", label: "Cart", icon: faShoppingCart},
+        { to: "/profile", label: "Profile", icon:faUser},
 
-        <nav className="flex justify-around items-center bg-white shadow-md py-3 border-t">
+    ];
 
-            <NavLink to="/" className="flex flex-col items-center text-xs">
-            <FontAwesomeIcon Icon={faHome} />
-            Home 
-            </NavLink>
-            <NavLink to="/booking" className="flex flax-col items-center text-xs">
-            <FontAwesomeIcon icon={faBook} />
-            Booking
-            </NavLink>
-            <NavLink to="/cart" className="flex flex-col items-center text-xs">
-            <FontAwesomeIcon icon={faShoppingCart} />
-                Cart
-            </NavLink>
-
-            <NavLink to="/profile" className="flex flex-col items-center text-xs">
-            <FontAwesomeIcon icon={faUser} />
-                Profile 
-            </NavLink>
-
-            
-        </nav>
-    );
-
-
-
+    return (
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-md py-2 px-4 flex justify-around items-center z-50">
+      {navItems.map((item) => (
+        <NavLink
+          key={item.to}
+          to={item.to}
+          className={`flex flex-col items-center text-xs ${
+            pathname === item.to ? "text-blue-600 border-t-2 border-blue-60" : "text-gray-700"
+          }`}
+        >
+          <FontAwesomeIcon icon={item.icon} className="text-xl mb-1" />
+          {item.label}
+        </NavLink>
+      ))}
+    </nav>
+  );
 };
 
 export default BottomNav;
