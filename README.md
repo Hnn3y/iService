@@ -20,7 +20,7 @@ flowchart TD
 
     %% Provider Selection
     J --> K{Select service Provider}:::decision
-    K --> L{View providers Profile}:::decision
+    K --> L{View provider Profile}:::decision
     L --> M{Make Decisions}:::decision
     M -->|No| J
     M -->|Yes| N{Check Availability}:::decision
@@ -34,28 +34,27 @@ flowchart TD
 
     %% Service Delivery
     S --> T[Service Delivery]:::delivery
-    T --> U((Receive Service)):::end
-    T --> V((Submit Review & Ratings)):::end
+    T --> U((Receive Service)):::endnode
+    T --> V((Submit Review & Ratings)):::endnode
     S --> W((View Receipt)):::receipt
 
     %% Booking History
     W --> X((View Booking History)):::history
     X --> Y((Track Current Bookings)):::history
 
-
     %% ----------------------------
-    %% STYLES
-    classDef start fill:#4da6ff,stroke:#004080,color:#fff,font-weight:bold
-    classDef account fill:#e63946,stroke:#800000,color:#fff,font-weight:bold
-    classDef action fill:#4caf50,stroke:#2e7d32,color:#fff
-    classDef dashboard fill:#ff9800,stroke:#e65100,color:#fff,font-weight:bold
-    classDef option fill:#b388ff,stroke:#4a148c,color:#000
-    classDef process fill:#26c6da,stroke:#006064,color:#fff
-    classDef decision fill:#e53935,stroke:#8e0000,color:#fff
-    classDef book fill:#f06292,stroke:#880e4f,color:#fff
-    classDef payment fill:#f8bbd0,stroke:#ad1457,color:#000
-    classDef delivery fill:#424242,stroke:#000,color:#fff
-    classDef end fill:#9e9e9e,stroke:#424242,color:#fff
-    classDef receipt fill:#66bb6a,stroke:#1b5e20,color:#fff
-    classDef history fill:#ffb74d,stroke:#e65100,color:#000
+    %% STYLES (v9/v10 safe)
+    classDef start fill:#4da6ff,stroke:#004080,stroke-width:1px,color:#ffffff
+    classDef account fill:#e63946,stroke:#800000,stroke-width:1px,color:#ffffff
+    classDef action fill:#4caf50,stroke:#2e7d32,stroke-width:1px,color:#ffffff
+    classDef dashboard fill:#ff9800,stroke:#e65100,stroke-width:1px,color:#ffffff
+    classDef option fill:#b388ff,stroke:#4a148c,stroke-width:1px,color:#000000
+    classDef process fill:#26c6da,stroke:#006064,stroke-width:1px,color:#ffffff
+    classDef decision fill:#e53935,stroke:#8e0000,stroke-width:1px,color:#ffffff
+    classDef book fill:#f06292,stroke:#880e4f,stroke-width:1px,color:#ffffff
+    classDef payment fill:#f8bbd0,stroke:#ad1457,stroke-width:1px,color:#000000
+    classDef delivery fill:#424242,stroke:#000000,stroke-width:1px,color:#ffffff
+    classDef endnode fill:#9e9e9e,stroke:#424242,stroke-width:1px,color:#ffffff
+    classDef receipt fill:#66bb6a,stroke:#1b5e20,stroke-width:1px,color:#ffffff
+    classDef history fill:#ffb74d,stroke:#e65100,stroke-width:1px,color:#000000
     ```
